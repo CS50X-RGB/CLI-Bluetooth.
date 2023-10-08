@@ -19,43 +19,55 @@ const moveCursor = (dx, dy) => {
 };
 
 const socket = net.createConnection({ host: "::1", port: 5050 }, async () => {
-    const filePath = process.argv[2];
-    const fileName = path.basename(filePath);
-    const fileHandle = await fs.open(filePath, "r");
-    const fileReadStream = fileHandle.createReadStream(); // the stream to read from
-    const fileSize = (await fileHandle.stat()).size;
+    const filePaths = process.argv.slice(2);
 
-    // For showing the upload progress
-    let uploadedPercentage = 0;
-    let bytesUploaded = 0;
+    for (const filePath of filePaths) {
+        const fileName = path.basename(filePath);
+        const fileHandle = await fs.open(filePath, "r");
+        const fileReadStream = fileHandle.createReadStream();
+        const fileSize = (await fileHandle.stat()).size;
 
-    socket.write(`fileName: ${fileName}-------`);
+        let uploadedPercentage = 0;
+        let bytesUploaded = 0;
 
-    console.log(); // to get a nice log for the progress percentage
+        socket.write(`fileName: ${fileName}-------`);
 
-    // Reading from the source file
-    fileReadStream.on("data", async (data) => {
-        if (!socket.write(data)) {
-            fileReadStream.pause();
+        console.log();
+
+        fileReadStream.on("data", async (data) => {
+            if (!socket.write(data)) {
+                fileReadStream.pause();
+            }
+
+            bytesUploaded += data.length;
+            let newPercentage = Math.floor((bytesUploaded / fileSize) * 100);
+
+            if (newPercentage !== uploadedPercentage) {
+                uploadedPercentage = newPercentage;
+                await moveCursor(0, -1);
+                await clearLine(0);
+                console.log(`Uploading... ${uploadedPercentage}%`);
+            }
+        });
+
+        socket.on("drain", () => {
+            fileReadStream.resume();
+        });
+
+        fileReadStream.on("end", () => {
+            console.log(`File '${fileName}' was successfully uploaded!`);
+            socket.write("-------end-of-file-------");
+        });
+    }
+
+    socket.on("data", (data) => {
+        if (data.toString() === "-------end-of-file-------") {
+            console.log("All files uploaded!");
+            socket.end();
         }
-
-        bytesUploaded += data.length; // add the number of bytes read to the variable
-        let newPercentage = Math.floor((bytesUploaded / fileSize) * 100);
-
-        if (newPercentage !== uploadedPercentage) {
-            uploadedPercentage = newPercentage;
-            await moveCursor(0, -1);
-            await clearLine(0);
-            console.log(`Uploading... ${uploadedPercentage}%`);
-        }
     });
+});
 
-    socket.on("drain", () => {
-        fileReadStream.resume();
-    });
-
-    fileReadStream.on("end", () => {
-        console.log("The file was successfully uploaded!");
-        socket.end();
-    });
+socket.on("end", () => {
+    console.log("Socket connection closed.");
 });
