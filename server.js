@@ -1,29 +1,28 @@
 const net = require("net");
 const fs = require("node:fs/promises");
+const path = require("path");
 
-const server = net.createServer(() => { });
-
-server.on("connection", (socket) => {
+const server = net.createServer((socket) => {
     console.log("New connection!");
+
     let fileHandle, fileWriteStream;
+    let fileName = null;
 
     socket.on("data", async (data) => {
         if (!fileHandle) {
-            socket.pause(); // pause receiving data from the client
+            socket.pause();
 
             const indexOfDivider = data.indexOf("-------");
-            const fileName = data.subarray(10, indexOfDivider).toString("utf-8");
+            fileName = data.subarray(10, indexOfDivider).toString("utf-8");
 
-            fileHandle = await fs.open(`/home/rohan/JS/networking/Uploader/Stroage/${fileName}`, "w");
-            fileWriteStream = fileHandle.createWriteStream(); // the stream to write to
+            fileHandle = await fs.open(
+                path.join(__dirname, "Storage", fileName),
+                "w"
+            );
+            fileWriteStream = fileHandle.createWriteStream();
 
-            // Writing to our destination file, discard the headers
             fileWriteStream.write(data.subarray(indexOfDivider + 7));
-
-            socket.resume(); // resume receiving data from the client
-            fileWriteStream.on("drain", () => {
-                socket.resume();
-            });
+            socket.resume();
         } else {
             if (!fileWriteStream.write(data)) {
                 socket.pause();
@@ -31,12 +30,18 @@ server.on("connection", (socket) => {
         }
     });
 
-    // This end event happens when the client.js file ends the socket
     socket.on("end", () => {
-        if (fileHandle) fileHandle.close();
-        fileHandle = undefined;
-        fileWriteStream = undefined;
-        console.log("Connection ended!");
+        if (fileHandle) {
+            fileHandle.close();
+            fileHandle = undefined;
+        }
+
+        if (fileWriteStream) {
+            fileWriteStream.end();
+            fileWriteStream = undefined;
+        }
+
+        console.log(`Connection ended for file: ${fileName}`);
     });
 });
 
