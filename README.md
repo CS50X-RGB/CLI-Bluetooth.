@@ -15,6 +15,35 @@ STAR⭐ The Repository OPEN FIRST Pull Request & Get it Merged! 🎉 🗣
 
 Our project aims to create a CLI-based file sharing solution using Node.js and Socket.io. The idea is to establish a connection between two devices using Socket.io and enable users to share files seamlessly through this connection. Let's learn and contribute to open source by enhancing this project!
 
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/your-username/CLI-Bluetooth.git
+   
+2. **Install Dependencies**: Navigate to the project directory and install the required dependencies:
+
+    ```
+    cd CLI-Bluetooth
+    npm install
+    ```
+
+3. **Start the Server**: Start the server by running the following command:
+
+    ```
+    node server.js
+    ```
+
+4. **Run the Client**: In a separate terminal, run the client by providing the path to the file(s) you want to share:
+
+    ```
+    node client.js /path/to/your/file1 /path/to/your/file2
+    ```
+
+You can specify one or more file paths to share multiple files simultaneously.
+   
 ## Current Progress
 
 As of now, we have implemented the functionality to store files using `server.js`. However, there is more work to be done to make this project fully functional and user-friendly.
