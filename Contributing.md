@@ -50,7 +50,8 @@ We are looking for contributions in the following areas:
 
 ## Code of Conduct
 
-Please note that this project has a Code of Conduct. By participating, you are expected to uphold this code. Please read the [Code of Conduct](https://chat.openai.com/c/CODE_OF_CONDUCT.md) for more information.
+Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before participating in this project. We are committed to fostering a welcoming and inclusive community.
+
 
 ## Our Valuable Contributors
 
