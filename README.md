@@ -91,5 +91,6 @@ A big thank you to our contributors who help make this project a success! Add yo
 
 1. John Doe - [@johndoe](https://github.com/johndoe)
 2. Jane Smith - [@janesmith](https://github.com/janesmith)
+3. Mansi - [@Mannxxx](https://github.com/Mannxxx)
 
 Let's work together to make this CLI Bluetooth File Sharing project even better! 🚀
