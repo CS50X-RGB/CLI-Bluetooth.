@@ -93,9 +93,6 @@ A big thank you to our contributors who help make this project a success! Add yo
   <a href="https://github.com/johndoe" style="margin-right: 20px;">
     <img src="https://images.weserv.nl/?url=https://github.com/johndoe.png?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="100" height="100" alt="John Doe">
   </a>
-  <a href="https://github.com/janesmith" style="margin-right: 20px;">
-    <img src="https://images.weserv.nl/?url=https://github.com/janesmith.png?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="100" height="100" alt="Jane Smith">
-  </a>
   <a href="https://github.com/Mannxxx">
     <img src="https://images.weserv.nl/?url=https://github.com/Mannxxx.png?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="100" height="100" alt="Mansi">
   </a>
