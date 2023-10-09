@@ -89,8 +89,13 @@ We are looking for contributors to help us achieve the following goals:
 
 A big thank you to our contributors who help make this project a success! Add your name here by getting your PR merged.
 
-1. John Doe - [@johndoe](https://github.com/johndoe)
-2. Jane Smith - [@janesmith](https://github.com/janesmith)
-3. Mansi - [@Mannxxx](https://github.com/Mannxxx)
+<div align="left">
+  <a href="https://github.com/johndoe" style="margin-right: 20px;">
+    <img src="https://images.weserv.nl/?url=https://github.com/johndoe.png?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="100" height="100" alt="John Doe">
+  </a>
+  <a href="https://github.com/Mannxxx">
+    <img src="https://images.weserv.nl/?url=https://github.com/Mannxxx.png?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="100" height="100" alt="Mansi">
+  </a>
+</div>
 
 Let's work together to make this CLI Bluetooth File Sharing project even better! 🚀
