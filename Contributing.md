@@ -47,7 +47,10 @@ To ensure a smooth contribution process, please adhere to the following guidelin
 
 - **Issue Reporting**: If you're raising an issue, please provide detailed information with a clear heading describing the problem and suggesting a solution.
 
-- **Proper Issue Creation**: When raising an issue,use [this template](File-Uploader/issues/new?assignees=&labels=&projects=&template=custom-issue.md&title=)., please ensure you add a proper heading, label,body and screenshot of issue of the issue for better organization and resolution.
+- **Proper Issue Creation**: When raising an issue,use [this template](https://github.com/CS50X-RGB/CLI-Bluetooth/issues/new?assignees=&labels=&projects=&template=custom-issue.md&title=)., please ensure you add a proper heading, 
+ label,body and screenshot of issue of the issue for better organization and resolution.
+
+-**Proper Pull Request Creation**: When raising a pull request , use this [template](https://github.com/CS50X-RGB/CLI-Bluetooth/blob/master/.github/pull_request_template.md).
 
 - **Timely Issue Resolution**: If an issue is assigned to you, aim to resolve it within 3-6 days, depending on the type of issue.
 
