@@ -47,6 +47,8 @@ To ensure a smooth contribution process, please adhere to the following guidelin
 
 - **Issue Reporting**: If you're raising an issue, please provide detailed information with a clear heading describing the problem and suggesting a solution.
 
+- **Proper Issue Creation**: When raising an issue, please ensure you add a proper heading, label,body and screenshot of issue of the issue for better organization and resolution.
+- 
 - **Timely Issue Resolution**: If an issue is assigned to you, aim to resolve it within 3-6 days, depending on the type of issue.
 
 - **Coding Standards**: Ensure your code adheres to the project's coding standards and follows best practices.
