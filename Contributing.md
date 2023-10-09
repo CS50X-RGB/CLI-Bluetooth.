@@ -4,36 +4,36 @@ Thank you for your interest in contributing to the CLI Bluetooth File Sharing pr
 
 ## Getting Started
 
-1. **Fork the Repository**: Start by forking this repository to your own GitHub account.
+1. Start by forking this repository to your own GitHub account.
 
-2. **Clone the Repository**: Clone the forked repository to your local machine using the following command:
+2. Clone the forked repository to your local machine using the following command:
 
     ```bash
     git clone https://github.com/your-username/CLI-Bluetooth.git
     ```
 
-3. **Create a New Branch**: Create a new branch for your contribution. Be sure to use a descriptive branch name. For example:
+3. Create a new branch for your contribution. Be sure to use a descriptive branch name. For example:
 
     ```bash
     git checkout -b feature/your-feature-name
     ```
 
-4. **Make Changes and Commit**: Make your desired changes, then commit them with clear and descriptive commit messages:
+4. Make your desired changes, then commit them with clear and descriptive commit messages:
 
     ```bash
     git add .
     git commit -m "Added feature/updated feature"
     ```
 
-5. **Push Changes to Your Fork**: Push the changes to your forked repository:
+5. Push the changes to your forked repository:
 
     ```bash
     git push origin feature/your-feature-name
     ```
 
-6. **Open a Pull Request**: Once you're satisfied with your changes, open a Pull Request to this repository.
+6. Once you're satisfied with your changes, open a Pull Request to this repository.
 
-7. **Review and Merge**: Our maintainers will review your PR. If it meets the guidelines, it will be merged into the main project.
+7. Our maintainers will review your PR. If it meets the guidelines, it will be merged into the main project.
 
 ## Guidelines
 
