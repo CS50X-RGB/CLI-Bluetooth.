@@ -96,6 +96,9 @@ A big thank you to our contributors who help make this project a success! Add yo
    <a href="https://github.com/CS50X-RGB">
     <img src="https://avatars.githubusercontent.com/u/89659393?v=4" width="50" height="50" alt="Mansi">
   </a>
+   <a href="https://github.com/mhamzanadeem">
+    <img src="https://images.weserv.nl/?url=https://github.com/mhamzanadeem.png?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" width="100" height="100" alt="mhamzanadeem">
+  </a>
 </div>
 
 Let's work together to make this CLI Bluetooth File Sharing project even better! 🚀
