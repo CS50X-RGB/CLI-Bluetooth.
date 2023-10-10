@@ -43,6 +43,50 @@ To get started with this project, follow these steps:
     ```
 
 You can specify one or more file paths to share multiple files simultaneously.
+
+## Usage Instructions
+
+To use the CLI menu, follow these simple steps:
+
+1. **Installation**: Make sure you have [Node.js](https://nodejs.org/) installed on your system.
+
+2. **Clone the Repository**: Clone this repository to your local machine.
+
+    ```bash
+    git clone https://github.com/your-username/your-repo.git
+    ```
+
+3. **Navigate to the Project Directory**: Change your working directory to the project folder.
+
+    ```bash
+    cd your-repo
+    ```
+
+4. **Install Dependencies**: Install the necessary dependencies using npm.
+
+    ```bash
+    npm install
+    ```
+
+5. **Run the CLI Menu**: Start the CLI menu by running the following command:
+
+    ```bash
+    node CLI_MENU.mjs
+    ```
+
+6. **Interact with the Menu**: The CLI menu will be displayed with two options:
+   - "Send file": Select this option to send a file. You will be prompted to input enter your name.
+   - "Exit": Select this option to exit the CLI menu.
+
+7. **File Sending (Simulated)**: If you choose to send a file, the program will simulate sending the file.
+
+8. **Enter Your Name**: When prompted, enter your name. The program will simulate storing your name.
+
+9. **Exiting the Menu**: To exit the menu, select the "Exit" option.
+
+That's it! You can now interact with the CLI menu and explore its functionality.
+
+Feel free to adapt these instructions to fit your specific project and CLI menu implementation.
    
 ## Current Progress
 
@@ -68,15 +112,14 @@ We are looking for contributors to help us achieve the following goals:
 
 1. Create a new branch for your contribution:
 
-   ```
-   bashCopy code
+   ```bash
    git checkout -b feature/your-feature-name
    ```
 
 2. Make your desired changes, commit them, and push to your forked repository:
 
-   ```
-   bashCopy codegit add .
+   ```bash
+   git add .
    git commit -m "Added feature/updated feature"
    git push origin feature/your-feature-name
    ```
